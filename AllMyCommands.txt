@@ -1,0 +1,150 @@
+Aya@Aya-PC MINGW64 ~ (master)
+$ mkdir sprint0
+
+Aya@Aya-PC MINGW64 ~ (master)
+$ cd sprint0
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   section1.1.txt
+        new file:   section3.1.txt
+        new file:   section5.1.txt
+
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git commit -m "3 sections of book"
+[master (root-commit) 04eff71] 3 sections of book
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 section1.1.txt
+ create mode 100644 section3.1.txt
+ create mode 100644 section5.1.txt
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git rm section3.1.txt
+rm 'section3.1.txt'
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    section3.1.txt
+
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git checkout
+D       section3.1.txt
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    section3.1.txt
+
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git checkout -f
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git remote add origin https://github.com/aya127/sprint0.git
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git remote -v
+origin  https://github.com/aya127/sprint0.git (fetch)
+origin  https://github.com/aya127/sprint0.git (push)
+
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git pull
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git push -f origin master
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ touch README.md
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git checkout -b ReadMe
+Switched to a new branch 'ReadMe'
+
+Aya@Aya-PC MINGW64 ~/sprint0 (ReadMe)
+$ git add README.md
+
+Aya@Aya-PC MINGW64 ~/sprint0 (ReadMe)
+$ git status
+On branch ReadMe
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   README.md
+
+
+Aya@Aya-PC MINGW64 ~/sprint0 (ReadMe)
+$ git commit -m "Info of project"
+[ReadMe e2241f8] Info of project
+ 1 file changed, 4 insertions(+)
+ create mode 100644 README.md
+
+
+Aya@Aya-PC MINGW64 ~/sprint0 (ReadMe)
+$ git pull origin master
+From https://github.com/aya127/sprint0
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+Aya@Aya-PC MINGW64 ~/sprint0 (ReadMe)
+$ git merge ReadMe
+Already up to date.
+
+
+Aya@Aya-PC MINGW64 ~/sprint0 (ReadMe)
+$ git push origin master
+Everything up-to-date
+
+Aya@Aya-PC MINGW64 ~/sprint0 (ReadMe)
+$ git checkout master
+Switched to branch 'master'
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git merge ReadMe
+Updating 04eff71..e2241f8
+Fast-forward
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 README.md
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git pull origin master
+From https://github.com/aya127/sprint0
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+Aya@Aya-PC MINGW64 ~/sprint0 (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 441 bytes | 441.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/aya127/sprint0.git
+   04eff71..e2241f8  master -> master
+
+
+
+
